@@ -19,7 +19,6 @@ Install the package globally using npm:
 
 ```bash
 npm install -g backend-setup
-
 ```
 
 ## Usage
@@ -27,10 +26,10 @@ npm install -g backend-setup
 Run the command:
 
 ```bash
-
-backend-setup 
-
+backend-setup [project-name]
 ```
+
+Replace `[project-name]` with the name of your project.
 
 ## Customization
 
@@ -38,6 +37,8 @@ You can customize the generated files by modifying the templates in the `templat
 
 ---
 
+### **Contributing**
 
-Copyright (c) 2025 scriptwithahmad
+[GitHub](https://github.com/scriptwithahmad) 
+[LinkedIn](https://www.linkedin.com/in/muhammad-ahmad-6b4303264)
 
