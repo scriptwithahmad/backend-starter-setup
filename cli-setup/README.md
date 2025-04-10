@@ -18,7 +18,7 @@ A **CLI tool** to quickly set up a **Node.js/Express.js backend structure** with
 Install the package globally using npm:
 
 ```bash
-npm install -g backend-setup
+npm install backend-setup-tool
 ```
 
 ## Usage
@@ -55,11 +55,10 @@ You can customize the generated files by modifying the templates in the `templat
 
 ---
 
-[![NPM Version](https://img.shields.io/npm/v/kinde-auth.svg)](https://www.npmjs.com/package/kinde-auth)
-[![NPM Downloads](https://img.shields.io/npm/dm/kinde-auth.svg)](https://www.npmjs.com/package/kinde-auth)
-[![License](https://img.shields.io/github/license/scriptwithahmad/Kinde-auth.svg)](https://github.com/scriptwithahmad/Kinde-auth/blob/main/LICENSE)
-[![GitHub Stars](https://img.shields.io/github/stars/scriptwithahmad/Kinde-auth?style=social)](https://github.com/scriptwithahmad/Kinde-auth/stargazers)
-[![GitHub Issues](https://img.shields.io/github/issues/scriptwithahmad/Kinde-auth)](https://github.com/scriptwithahmad/Kinde-auth/issues)
+[![NPM Version](https://img.shields.io/npm/v/backend-setup-tool.svg)](https://www.npmjs.com/package/backend-setup-tool)
+[![NPM Downloads](https://img.shields.io/npm/dm/backend-setup-tool.svg)](https://www.npmjs.com/package/backend-setup-tool)
+[![GitHub Stars](https://img.shields.io/github/stars/scriptwithahmad/backend-starter-setup?style=social)](https://github.com/scriptwithahmad/backend-starter-setup/stargazers)
 
+<!-- https://github.com/scriptwithahmad/backend-starter-setup -->
 
 A **supercharged CLI tool** to instantly scaffold a professional **Node.js + Express.js backend**...
