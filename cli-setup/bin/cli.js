@@ -1,13 +1,18 @@
 #!/usr/bin/env node
-import { setupBackend } from '../index.js';
+import inquirer from "inquirer";
+import { setupBackend } from "../index.js";
 
 const targetDir = process.argv[2] || process.cwd();
-setupBackend(targetDir);
 
-
-// #!/usr/bin/env node
-// const setupBackend = require('../index');
-// const targetDir = process.argv[2] || process.cwd();
-
-// setupBackend(targetDir);
-
+inquirer
+  .prompt([
+    {
+      type: "list",
+      name: "databaseType",
+      message: "Choose your database type:",
+      choices: ["SQL", "NoSQL (MongoDB)"],
+    },
+  ])
+  .then((answers) => {
+    setupBackend(targetDir, answers.databaseType);
+  });

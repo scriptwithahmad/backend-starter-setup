@@ -1,23 +1,40 @@
-import fs from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-// Get the directory name of the current module
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-// Define the setupBackend function
-export function setupBackend(targetDir) {
-  // Use __dirname to get the correct path to the templates folder
-  const templatesDir = path.join(__dirname, "templates");
+export function setupBackend(targetDir, databaseType) {
+  try {
+    // Database type mapping
+    const dbFolderMap = {
+      'SQL': 'sql',
+      'NoSQL (MongoDB)': 'nosql'
+    };
+    const dbFolderName = dbFolderMap[databaseType];
+    
+    if (!dbFolderName) {
+      throw new Error(`Unsupported database type: ${databaseType}`);
+    }
 
-  // Check if the templates folder exists
-  if (!fs.existsSync(templatesDir)) {
-    console.error("Error: Templates folder not found at:", templatesDir);
+    // Paths to templates
+    const sharedTemplates = path.join(__dirname, 'templates/shared');
+    const dbSpecificTemplates = path.join(__dirname, 'templates', dbFolderName);
+
+    // Verify templates exist
+    if (!fs.existsSync(sharedTemplates) || !fs.existsSync(dbSpecificTemplates)) {
+      throw new Error('Template folders not found');
+    }
+
+    // Copy shared files first
+    fs.cpSync(sharedTemplates, targetDir, { recursive: true });
+
+    // Then copy database-specific files (will overwrite any duplicates)
+    fs.cpSync(dbSpecificTemplates, targetDir, { recursive: true, overwrite: true });
+    
+    console.log(`✅ Successfully created ${databaseType} project with all files at ${targetDir}`);
+  } catch (error) {
+    console.error('❌ Setup failed:', error.message);
     process.exit(1);
   }
-
-  // Copy all files and folders recursively
-  fs.cpSync(templatesDir, targetDir, { recursive: true });
-
-  console.log("Backend structure setup complete!");
 }

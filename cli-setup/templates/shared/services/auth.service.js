@@ -1,6 +1,4 @@
-import { User } from "../database/db.js";
-
-// checkIfUserExist, createUser
+import User from "../models/user.model.js"; // Adjust the import according to your project structure
 
 export const checkIfUserExist = async (data) => {
   const user = await User.findOne({ where: { email: data.email } });
