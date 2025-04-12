@@ -1,22 +1,28 @@
 {
   "name": "backend-setup-tool",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "2.0.3",
+  "description": "A CLI tool to quickly set up a Node.js/Express.js backend structure.",
+  "main": "app.js",
+  "bin": {
+    "backend-setup": "bin/cli.js"
+  },
+  "type": "module",
   "scripts": {
+    "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "author": "scriptwithahmad@gmail.com",
+  "keywords": [
+    "backend",
+    "setup",
+    "express",
+    "node",
+    "cli"
+  ],
   "license": "ISC",
-  "description": "",
   "dependencies": {
-    "dotenv": "^16.4.7",
-    "express": "^4.21.2",
     "fs": "^0.0.1-security",
-    "fs-extra": "^11.3.0",
+    "inquirer": "^12.5.0",
     "path": "^0.12.7"
-  },
-  "bin": {
-    "backend-setup": "./bin/cli.js"
   }
 }

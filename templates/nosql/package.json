@@ -12,7 +12,6 @@
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
-    "cloudinary": "^2.5.1",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
@@ -20,9 +19,6 @@
     "joi": "^17.13.3",
     "jsonwebtoken": "^9.0.2",
     "nodemon": "^3.1.9",
-    "pg": "^8.13.1",
-    "sequelize": "^6.6.5",
-    "uuid": "^8.3.2",
     "mongoose": "^8.13.0"
   }
 }
