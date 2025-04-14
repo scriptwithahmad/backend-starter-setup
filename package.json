@@ -1,7 +1,7 @@
 {
   "name": "backend-setup-tool",
-  "version": "2.0.3",
-  "description": "A CLI tool to quickly set up a Node.js/Express.js backend structure.",
+  "version": "2.0.4",
+  "description": "A powerful CLI tool to instantly scaffold a clean and scalable Node.js/Express.js backend for SQL or NoSQL projects.",
   "main": "app.js",
   "bin": {
     "backend-setup": "bin/cli.js"
@@ -13,11 +13,12 @@
   },
   "author": "scriptwithahmad@gmail.com",
   "keywords": [
-    "backend",
-    "setup",
-    "express",
-    "node",
-    "cli"
+    "backend-setup",
+    "nodejs",
+    "cli",
+    "mongodb",
+    "mysql",
+    "postgresql"
   ],
   "license": "ISC",
   "dependencies": {
